@@ -1,12 +1,13 @@
+<?xml version="1.0" ?>
 <resources>
     <string name="app_name">s8162795Assignment2</string>
     <string name="brand">NIT3213 · BRISBANE</string>
     <string name="welcome">Your next discovery\nstarts here.</string>
     <string name="login_subtitle">Sign in to explore your assigned collection.</string>
     <string name="student_id">Student ID (without s)</string>
-    <string name="first_name">First name (case-sensitive)</string>
+    <string name="first_name">Password (case-sensitive)</string>
     <string name="login">Sign in</string>
-    <string name="login_hint">Use your numeric student ID and your first name exactly as registered.</string>
+    <string name="login_hint">Use your student ID without s and the password provided by your lecturer. Spaces and capital letters matter.</string>
     <string name="dashboard">Your collection</string>
     <string name="dashboard_hint">Choose an item to explore all its details.</string>
     <string name="refresh">Refresh</string>
@@ -20,7 +21,7 @@
     <string name="entity_details">Item details</string>
     <string name="details_unavailable">Details are unavailable. Go back and select an item again.</string>
     <string name="back">Back to collection</string>
-    <string name="detail_eyebrow">THE FULL PICTURE</string>
+    <string name="detail_eyebrow">COLLECTION / DETAILS</string>
     <string name="error_input">Enter a numeric student ID without s, and your case-sensitive first name.</string>
     <string name="error_auth">Access was rejected. Check your details or sign in again.</string>
     <string name="error_network">Unable to connect. Check your internet connection and try again.</string>
@@ -31,4 +32,10 @@
     <string name="error_not_found">The requested collection could not be found.</string>
     <string name="error_rate_limit">Too many requests. Please wait before trying again.</string>
     <string name="error_server">The server is unavailable. Please try again later.</string>
+    <string name="login_form_title">Welcome back</string>
+    <string name="login_form_hint">Enter your details to get started.</string>
+    <string name="collection_label">YOUR ASSIGNED TOPIC</string>
+    <string name="browse_label">Explore the collection</string>
+    <string name="detail_intro">Everything you need to know, in one place.</string>
+    <string name="item_label">COLLECTION ITEM</string>
 </resources>

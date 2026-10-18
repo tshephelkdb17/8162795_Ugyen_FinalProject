@@ -1,18 +1,24 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/background" android:padding="20dp">
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/brand" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/accent" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/dashboard" android:textSize="30sp" android:textStyle="bold" android:textColor="@color/ink" />
-    <TextView android:id="@+id/topicText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textSize="20sp" android:textColor="@color/accent" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/dashboard_hint" android:textColor="@color/muted" />
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
-        <com.google.android.material.button.MaterialButton android:id="@+id/refreshButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/refresh" style="@style/Widget.Material3.Button.OutlinedButton" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/logoutButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/logout" style="@style/Widget.Material3.Button.TextButton" />
+<?xml version="1.0" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/background" android:padding="20dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/brand" android:textColor="@color/accent" android:textStyle="bold" android:textSize="11sp" android:letterSpacing="0.08"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/logoutButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/logout" app:cornerRadius="14dp"/>
     </LinearLayout>
-    <TextView android:id="@+id/countText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:textColor="@color/muted" android:visibility="gone" />
-    <ProgressBar android:id="@+id/progressBar" android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="center" android:layout_marginTop="32dp" android:visibility="gone" />
-    <LinearLayout android:id="@+id/errorGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="24dp" android:paddingBottom="24dp" android:visibility="gone">
-        <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/error" android:accessibilityLiveRegion="polite" />
-        <com.google.android.material.button.MaterialButton android:id="@+id/retryButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/retry" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dashboard" android:textSize="30sp" android:textColor="@color/ink" android:layout_marginTop="8dp" android:textStyle="bold"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="16dp" android:padding="20dp" android:background="@drawable/bg_hero">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/collection_label" android:textSize="10sp" android:textColor="@color/mint" android:letterSpacing="0.12" android:textStyle="bold"/>
+        <TextView android:id="@+id/topicText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/white"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dashboard_hint" android:textSize="14sp" android:textColor="@color/on_navy" android:layout_marginTop="8dp"/>
     </LinearLayout>
-    <TextView android:id="@+id/emptyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="24dp" android:paddingBottom="24dp" android:text="@string/empty" android:textColor="@color/muted" android:visibility="gone" />
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/entityList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingBottom="12dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+        <TextView android:id="@+id/countText" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/muted" android:visibility="gone"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/refreshButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/refresh" app:cornerRadius="14dp"/>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progressBar" android:layout_width="40dp" android:layout_height="40dp" android:layout_gravity="center" android:layout_marginTop="24dp" android:visibility="gone"/>
+    <LinearLayout android:id="@+id/errorGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:layout_marginTop="12dp" android:background="@drawable/bg_error" android:visibility="gone">
+        <TextView android:id="@+id/errorText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/error" android:accessibilityLiveRegion="polite"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/retryButton" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/retry" app:cornerRadius="14dp" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/emptyText" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="24dp" android:layout_marginTop="12dp" android:background="@drawable/bg_panel" android:text="@string/empty" android:textColor="@color/muted" android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/entityList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingTop="8dp" android:paddingBottom="16dp"/>
 </LinearLayout>

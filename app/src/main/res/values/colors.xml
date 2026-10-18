@@ -1,8 +1,15 @@
+<?xml version="1.0" ?>
 <resources>
-    <color name="ink">#162B40</color>
-    <color name="muted">#526779</color>
-    <color name="accent">#006D77</color>
-    <color name="background">#F3F6FA</color>
+    <color name="ink">#142C40</color>
+    <color name="muted">#526575</color>
+    <color name="accent">#006B69</color>
+    <color name="background">#F3F6F8</color>
     <color name="white">#FFFFFF</color>
-    <color name="error">#B3261E</color>
+    <color name="error">#A52323</color>
+    <color name="navy">#142C40</color>
+    <color name="mint">#A6E8D8</color>
+    <color name="pale">#E4F3EF</color>
+    <color name="border">#D9E3E9</color>
+    <color name="error_surface">#FFF0EE</color>
+    <color name="on_navy">#D6E3EC</color>
 </resources>
