@@ -83,3 +83,6 @@ This ZIP contains source, not a fabricated Git history. Start a repository and c
 
 See `VALIDATION.md` for the checks actually performed when packaging this copy.
 # 8162795_Ugyen_FinalProject
+
+## UI refresh
+See UI_UPDATE.md for the design changes, verification limits and how to apply them without losing Git history.
