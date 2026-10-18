@@ -1,0 +1,8 @@
+<resources>
+    <color name="ink">#162B40</color>
+    <color name="muted">#526779</color>
+    <color name="accent">#006D77</color>
+    <color name="background">#F3F6FA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="error">#B3261E</color>
+</resources>
