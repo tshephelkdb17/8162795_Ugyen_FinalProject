@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.s8162795assignment2.R
 import com.example.s8162795assignment2.databinding.ItemDetailFieldBinding
 import com.example.s8162795assignment2.databinding.ActivityDetailsBinding
+import com.example.s8162795assignment2.domain.model.EntityField
+import com.example.s8162795assignment2.presentation.common.FoodImages
 import com.example.s8162795assignment2.domain.model.Entity
 import com.example.s8162795assignment2.presentation.common.applySystemInsets
 import com.example.s8162795assignment2.presentation.common.fieldLabel
@@ -27,6 +29,7 @@ class DetailsActivity : AppCompatActivity() {
         }
         binding.detailTitle.text = names.indices.firstOrNull { !names[it].equals("description", true) }
             ?.let { values[it] }?.takeIf { it.isNotBlank() } ?: getString(R.string.entity_details)
+        FoodImages.bind(binding.detailImage, names.indices.map { EntityField(names[it], values[it]) })
         // Every original field is rendered, including the full description.
         names.indices.forEach { index ->
             // Inflate a shared XML component so all fields share spacing and typography.

@@ -9,6 +9,7 @@ import com.example.s8162795assignment2.R
 import com.example.s8162795assignment2.databinding.ItemEntityBinding
 import com.example.s8162795assignment2.domain.model.Entity
 import com.example.s8162795assignment2.presentation.common.fieldLabel
+import com.example.s8162795assignment2.presentation.common.FoodImages
 
 class EntityAdapter(private val onClick: (Entity) -> Unit) :
     ListAdapter<Entity, EntityAdapter.Holder>(Diff) {
@@ -20,6 +21,7 @@ class EntityAdapter(private val onClick: (Entity) -> Unit) :
         val entity = getItem(position)
         val fields = entity.summaryFields
         with(holder.binding) {
+            FoodImages.bind(entityImage, entity.fields)
             entityTitle.text = fields.firstOrNull()?.value?.takeIf { it.isNotBlank() }
                 ?: root.context.getString(R.string.untitled_entity)
             entitySummary.text = fields.joinToString("\n") { "${it.name.fieldLabel()}: ${it.value}" }
